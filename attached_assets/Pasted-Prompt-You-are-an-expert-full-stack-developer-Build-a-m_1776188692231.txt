@@ -1,0 +1,192 @@
+Prompt:
+
+You are an expert full-stack developer. Build a modern, high-converting single-page dental clinic website using:
+
+Frontend: React (Vite preferred)
+Backend: Node.js + Express
+Styling: Tailwind CSS (clean, minimal, responsive)
+Deployment-ready structure (Replit-friendly)
+
+The website must be fast, mobile-first, SEO-friendly, and designed for high trust and conversions.
+
+🎯 CORE REQUIREMENTS
+Single-page layout (scroll navigation, no multiple pages)
+Clean, minimal, medical-style design (white + blue/teal palette)
+Trust-building UI (realistic, not flashy)
+Fully responsive (mobile priority)
+Smooth scrolling navigation
+🧱 WEBSITE STRUCTURE (IN ORDER)
+1. HERO SECTION (Critical for conversion)
+Left: Text content
+Right: Doctor/clinic image (use placeholder but structured for real images)
+
+Content:
+
+Clinic Name: IC Dental Clinic
+Headline: Advanced Dental Care for a Confident Smile
+Subtext: Pain-free treatments | Experienced Dentist | Book Today
+
+Buttons:
+
+Primary: "Book Appointment"
+Secondary: "View Services"
+2. ABOUT CLINIC
+3–4 lines max (concise)
+Focus: trust, technology, experience
+
+Example:
+“IC Dental Clinic provides modern, painless dental treatments using advanced technology and personalized care.”
+
+Add:
+
+3 highlight cards:
+10+ Years Experience
+5000+ Happy Patients
+Modern Equipment
+3. ABOUT DOCTOR
+Doctor image (left or top on mobile)
+Info:
+Name
+Qualification
+Experience
+
+Example:
+Dr. Example Name
+BDS, MDS (Orthodontics)
+10+ years experience in smile correction and implants
+
+Keep concise and professional.
+
+4. SERVICES SECTION (Grid Layout)
+
+Show 6–8 services max:
+
+Teeth Cleaning
+Teeth Whitening
+Dental Implants
+Root Canal
+Braces / Aligners
+Smile Design
+
+Each card must include:
+
+Icon/image
+Service name
+1-line description
+"Book Now" button
+5. GALLERY (Before/After)
+Note : Use before and after image slider for Smile transformations
+Categories:
+Smile transformations
+Clinic interior
+Equipment
+
+Use placeholders but structure for real images.
+
+6. REVIEWS SECTION
+Show 3–5 reviews max
+Each review:
+Name
+Star rating (⭐⭐⭐⭐⭐)
+Short text
+
+Add “View All Reviews” button
+
+7. CONTACT SECTION
+
+Include:
+
+Click-to-call phone number
+WhatsApp button
+Address
+Embedded Google Map
+
+Form (minimal):
+
+Name
+Phone
+Message
+
+Backend (Node.js):
+
+Create API endpoint to receive form submissions
+Log or store submissions (basic implementation)
+8. FLOATING WHATSAPP BUTTON
+Fixed bottom-right
+Pre-filled message:
+"Hi, I want to book an appointment"
+
+9FOOTER STRUCTURE (3 COLUMNS)
+1️⃣ LEFT COLUMN (Clinic Info)
+Clinic Name:IC Dental Clinic
+Description (short, 2 lines max):
+“Providing world-class, painless dental care in Borivai West. Your smile is our top priority.”
+Social Icons (rounded):
+Facebook
+Instagram
+YouTube
+
+👉 Icons should be circular with hover effect (slight glow or scale)
+
+2️⃣ CENTER COLUMN (Quick Links)
+
+Title: Quick Links
+
+Links:
+
+Home
+About Us
+Our Services
+Gallery & Results
+Contact & Book
+
+👉 Smooth scroll to sections (no page reload)
+
+3️⃣ RIGHT COLUMN (Contact Info)
+
+Title: Contact Us
+
+Include:
+
+📍 Address:
+Raj Sebastian Kinny society, Shop11, IC Colony Cross Rd Number 4, next to Silvercoin restuarant, I C Colony, Borivali West, Mumbai, Maharashtra 400103
+
+📞 Phone:
++91 09820600844 (click-to-call)
+
+🕒 Timings:
+Mon - Sat:
+10 AM - 2 PM
+5:30 PM - 10 PM
+
+Sunday: By Appointment
+
+👉 Use icons for each (location, phone, clock)
+
+🔻 BOTTOM BAR (SUB-FOOTER)
+
+Add a thin bottom section:
+
+Left:
+© 2026 IC Dental Clinic. All rights reserved.
+
+must be in 
+Organized folders:
+/components
+/sections
+/server
+🎨 DESIGN GUIDELINES
+Colors: white, light blue, teal
+Typography: modern, clean (e.g., Inter or Poppins)
+Spacing: airy and uncluttered
+Avoid:
+Long paragraphs
+Clutter
+Stock-looking layouts
+🚀 OUTPUT REQUIREMENTS
+Provide full working code
+Include:
+React frontend
+Express backend
+Setup instructions for Replit
+Ensure code is clean, modular, and commented

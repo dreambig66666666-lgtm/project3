@@ -10,6 +10,8 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: contact
+    description: Contact form operations
 paths:
   /healthz:
     get:
@@ -24,6 +26,27 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /contact:
+    post:
+      operationId: submitContactForm
+      tags: [contact]
+      summary: Submit contact form
+      description: Receives a contact form submission from the website
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ContactFormInput"
+      responses:
+        "201":
+          description: Form submitted successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ContactFormResponse"
+        "400":
+          description: Validation error
 components:
   schemas:
     HealthStatus:
@@ -33,4 +56,30 @@ components:
           type: string
       required:
         - status
-
+    ContactFormInput:
+      type: object
+      properties:
+        name:
+          type: string
+          minLength: 1
+          maxLength: 100
+        phone:
+          type: string
+          minLength: 1
+          maxLength: 20
+        message:
+          type: string
+          maxLength: 1000
+      required:
+        - name
+        - phone
+    ContactFormResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        id:
+          type: integer
+      required:
+        - success
+        - id

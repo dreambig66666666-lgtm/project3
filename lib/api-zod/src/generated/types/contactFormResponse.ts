@@ -6,6 +6,7 @@
  * OpenAPI spec version: 0.1.0
  */
 
-export * from "./contactFormInput";
-export * from "./contactFormResponse";
-export * from "./healthStatus";
+export interface ContactFormResponse {
+  success: boolean;
+  id: number;
+}
