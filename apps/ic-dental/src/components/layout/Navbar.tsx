@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "wouter";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -48,19 +47,27 @@ export default function Navbar() {
           : "bg-transparent py-5"
       }`}
     >
-      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
+      <div className="container px-4 md:px-6 flex items-center justify-between">
         <div 
           className="flex items-center gap-3 cursor-pointer" 
           onClick={() => scrollTo("home")}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              scrollTo("home");
+            }
+          }}
         >
           <img
             src="/logo.png"
             alt="IC Dental logo"
-            
+            className="h-20 w-20 object-contain"
           />
           <div className="flex flex-col">
             <span className="text-[40px] font-display font-bold text-lg leading-none text-foreground ">IC Dental</span>
-            <span className="text-xl font-medium text-primary tracking-wider uppercase">Clinic</span>
+            <span className="text-2xl font-medium text-primary tracking-wider uppercase ">Clinic</span>
           </div>
         </div>
 
@@ -70,8 +77,9 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <li key={link.name}>
                 <button 
+                  type="button"
                   onClick={() => scrollTo(link.id)}
-                  className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-200"
+                  className="text-md font-medium text-foreground/80 hover:text-primary transition-colors duration-200"
                 >
                   {link.name}
                 </button>
@@ -80,13 +88,7 @@ export default function Navbar() {
           </ul>
           
           <div className="flex items-center gap-4 ml-2 pl-6 border-l border-border">
-            <a 
-              href="tel:+9109820600844" 
-              className="flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
-            >
-              <Phone className="w-4 h-4 text-primary" />
-              <span className="hidden xl:inline">+91 09820600844</span>
-            </a>
+            
             <Button 
               onClick={() => scrollTo("contact")}
               className="font-semibold rounded-full shadow-md hover:shadow-lg transition-all"
@@ -98,6 +100,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <button 
+          type="button"
           className="lg:hidden text-foreground p-2 -mr-2"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
@@ -113,6 +116,7 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <li key={link.name}>
                 <button 
+                  type="button"
                   onClick={() => scrollTo(link.id)}
                   className="w-full text-left p-3 rounded-lg text-sm font-medium text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors duration-200"
                 >
@@ -122,13 +126,7 @@ export default function Navbar() {
             ))}
           </ul>
           <div className="flex flex-col gap-3 p-3 bg-secondary/30 rounded-xl mt-2 border border-border/50">
-            <a 
-              href="tel:+9109820600844" 
-              className="flex items-center justify-center gap-2 text-sm font-semibold text-foreground py-2"
-            >
-              <Phone className="w-4 h-4 text-primary" />
-              +91 09820600844
-            </a>
+            
             <Button 
               onClick={() => scrollTo("contact")}
               className="w-full font-semibold rounded-lg"
