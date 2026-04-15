@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Navbar() {
@@ -10,13 +10,26 @@ export default function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
+
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const scrollTo = (id: string) => {
     setIsMobileMenuOpen(false);
     const element = document.getElementById(id);
+
     if (element) {
       const offset = 80;
       const bodyRect = document.body.getBoundingClientRect().top;
@@ -26,7 +39,7 @@ export default function Navbar() {
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: "smooth"
+        behavior: "smooth",
       });
     }
   };
@@ -40,58 +53,55 @@ export default function Navbar() {
   ];
 
   return (
-    <header 
+    <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent ${
-        isScrolled 
-          ? "bg-background/95 backdrop-blur-md border-border shadow-sm py-3" 
+        isScrolled
+          ? "bg-background/95 backdrop-blur-md border-border shadow-sm py-3"
           : "bg-transparent py-5"
       }`}
     >
-      <div className="container px-4 md:px-6 flex items-center justify-between">
-        <div 
-          className="flex items-center gap-3 cursor-pointer" 
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 md:px-6">
+        <button
+          type="button"
+          className="flex items-center gap-2 sm:gap-3 cursor-pointer shrink-0 min-w-0"
           onClick={() => scrollTo("home")}
-          role="button"
-          tabIndex={0}
-          onKeyDown={(e) => {
-            if (e.key === "Enter" || e.key === " ") {
-              e.preventDefault();
-              scrollTo("home");
-            }
-          }}
+          aria-label="Go to home"
         >
           <img
             src="/logo.png"
             alt="IC Dental logo"
-            className="h-20 w-20 object-contain"
+            className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 object-contain shrink-0"
           />
-          <div className="flex flex-col">
-            <span className="text-[40px] font-display font-bold text-lg leading-none text-foreground ">IC Dental</span>
-            <span className="text-2xl font-medium text-primary tracking-wider uppercase ">Clinic</span>
+          <div className="flex flex-col leading-none whitespace-nowrap min-w-0">
+            <span className="text-lg sm:text-xl md:text-2xl font-bold text-foreground">
+              IC Dental
+            </span>
+            <span className="text-xs sm:text-sm font-medium text-primary tracking-wider uppercase">
+              Clinic
+            </span>
           </div>
-        </div>
+        </button>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-8">
-          <ul className="flex items-center gap-6">
+        <nav className="hidden lg:flex items-center gap-6 xl:gap-8 shrink-0">
+          <ul className="flex items-center gap-4 xl:gap-6">
             {navLinks.map((link) => (
               <li key={link.name}>
-                <button 
+                <button
                   type="button"
                   onClick={() => scrollTo(link.id)}
-                  className="text-md font-medium text-foreground/80 hover:text-primary transition-colors duration-200"
+                  className="rounded-md px-1 py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-200 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
                 >
                   {link.name}
                 </button>
               </li>
             ))}
           </ul>
-          
+
           <div className="flex items-center gap-4 ml-2 pl-6 border-l border-border">
-            
-            <Button 
+            <Button
               onClick={() => scrollTo("contact")}
-              className="font-semibold rounded-full shadow-md hover:shadow-lg transition-all"
+              className="h-10 px-5 text-sm font-semibold rounded-full shadow-md hover:shadow-lg transition-all"
             >
               Book Appointment
             </Button>
@@ -99,11 +109,12 @@ export default function Navbar() {
         </nav>
 
         {/* Mobile Menu Toggle */}
-        <button 
+        <button
           type="button"
           className="lg:hidden text-foreground p-2 -mr-2"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
+          aria-expanded={isMobileMenuOpen}
         >
           {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
@@ -115,7 +126,7 @@ export default function Navbar() {
           <ul className="flex flex-col gap-2">
             {navLinks.map((link) => (
               <li key={link.name}>
-                <button 
+                <button
                   type="button"
                   onClick={() => scrollTo(link.id)}
                   className="w-full text-left p-3 rounded-lg text-sm font-medium text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors duration-200"
@@ -125,11 +136,11 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
+
           <div className="flex flex-col gap-3 p-3 bg-secondary/30 rounded-xl mt-2 border border-border/50">
-            
-            <Button 
+            <Button
               onClick={() => scrollTo("contact")}
-              className="w-full font-semibold rounded-lg"
+              className="w-full h-10 font-semibold rounded-lg text-sm"
             >
               Book Appointment
             </Button>
