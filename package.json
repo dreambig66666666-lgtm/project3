@@ -3,14 +3,15 @@
   "version": "0.0.0",
   "license": "MIT",
   "workspaces": [
-    "apps/*",
-    "packages/*",
-    "tools/*"
+    "apps/ic-dental",
+    "packages/api-client-react"
   ],
   "scripts": {
-    "build": "npm run typecheck && npm run build --workspaces",
+    "dev": "npm run dev -w @workspace/ic-dental",
+    "build": "npm run build -w @workspace/ic-dental",
+    "serve": "npm run serve -w @workspace/ic-dental",
     "typecheck:libs": "tsc --build",
-    "typecheck": "npm run typecheck:libs && npm run typecheck --workspaces"
+    "typecheck": "npm run typecheck:libs && npm run typecheck -w @workspace/ic-dental"
   },
   "private": true,
   "devDependencies": {
