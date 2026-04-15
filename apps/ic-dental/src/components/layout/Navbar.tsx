@@ -76,7 +76,7 @@ export default function Navbar() {
             <span className="text-lg sm:text-xl md:text-2xl font-bold text-foreground">
               IC Dental
             </span>
-            <span className="text-xs sm:text-sm font-medium text-primary tracking-wider uppercase">
+            <span className="text-left text-xs sm:text-sm font-medium text-primary tracking-wider uppercase text-foreground">
               Clinic
             </span>
           </div>

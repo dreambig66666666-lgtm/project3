@@ -53,9 +53,9 @@ export default function HeroSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl md:text-5xl lg:text-6xl/tight font-display font-bold text-foreground"
           >
-            Advanced Dental Care for{" "}
+            Get Your Perfect Smile with{" "}
             <span className="text-primary relative inline-block">
-              Confident Smile
+            IC Dental Clinic
               <svg
                 className="absolute w-full h-3 -bottom-1 left-0 text-primary/30"
                 viewBox="0 0 100 10"
@@ -88,7 +88,7 @@ export default function HeroSection() {
             </span>
             <span className="text-border hidden sm:inline">•</span>
             <span className="flex items-center gap-1">
-              <Clock className="w-4 h-4 text-primary" /> Book Today
+              <Clock className="w-4 h-4 text-primary" /> Limited slots available today
             </span>
           </motion.p>
 
@@ -127,14 +127,14 @@ export default function HeroSection() {
           >
             <div>
               <span className="text-3xl font-bold">10+</span>
-              <span className="text-sm text-muted-foreground">Years Exp.</span>
+              <span className="text-sm flex items-center gap-1 text-muted-foreground">Years Exp.</span>
             </div>
             <div>
               <span className="text-3xl font-bold">5k+</span>
-              <span className="text-sm text-muted-foreground">Happy Smiles</span>
+              <span className="text-sm flex items-center gap-1 text-muted-foreground">Happy Smiles</span>
             </div>
             <div>
-              <span className="text-3xl font-bold">4.9</span>
+              <span className="text-3xl font-bold">5.0</span>
               <span className="text-sm flex items-center gap-1 text-muted-foreground">
                 <Star className="w-3 h-3 fill-amber-400 text-amber-400" /> Rating
               </span>
