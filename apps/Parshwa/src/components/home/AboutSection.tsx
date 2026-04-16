@@ -28,12 +28,12 @@ export default function AboutSection() {
             className="flex flex-col gap-8"
           >
             <motion.div variants={fadeInUp} custom={0} className="flex flex-col gap-4">
-              <span className="text-primary font-semibold text-sm tracking-wider uppercase">About Our Clinic</span>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground leading-tight">
+              <span className="text-primary font-bold text-3xl tracking-wider uppercase">About Our Clinic</span>
+              <h2 className="text-3xl md:text-2xl font-display font-bold text-foreground leading-tight">
                 Your Smile Deserves the Best Care
               </h2>
               <p className="text-muted-foreground leading-relaxed text-lg">
-                IC Dental Clinic provides modern, painless dental treatments using advanced technology and personalized care. Our experienced team ensures every visit is comfortable, efficient, and tailored to your unique dental needs.
+                Parshwa  Dental Clinic provides modern, painless dental treatments using advanced technology and personalized care. Our experienced team ensures every visit is comfortable, efficient, and tailored to your unique dental needs.
               </p>
             </motion.div>
 
@@ -74,8 +74,8 @@ export default function AboutSection() {
                 <GraduationCap className="w-10 h-10 text-primary" />
               </div>
               <div className="flex flex-col gap-2">
-                <h3 className="text-xl font-display font-bold text-foreground">Dr.Savii Bangera</h3>
-                <p className="text-sm text-primary font-semibold">BDS,FAGE (Dental Surgeon)</p>
+                <h3 className="text-xl font-display font-bold text-foreground">DR. Drishti</h3>
+                <p className="text-sm text-primary font-semibold">BDS (Dental Surgeon)</p>
                 <p className="text-sm text-muted-foreground">
                   10+ years experience in smile correction and implants. Dedicated to providing comfortable and transformative dental care.
                 </p>

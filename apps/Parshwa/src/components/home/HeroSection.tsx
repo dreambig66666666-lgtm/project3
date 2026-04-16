@@ -42,7 +42,7 @@ export default function HeroSection() {
           >
             <span className="flex h-2 w-2 rounded-full bg-primary animate-pulse" />
             <span className="text-xs font-semibold text-primary tracking-wide uppercase">
-              Trusted Dental Clinic in Borivali West
+              Trusted Dental Clinic in Kandivali West
             </span>
           </motion.div>
 
@@ -55,7 +55,7 @@ export default function HeroSection() {
           >
             Get Your Perfect Smile with{" "}
             <span className="text-primary relative inline-block">
-            IC Dental Clinic
+            Parshwa  Dental Clinic
               <svg
                 className="absolute w-full h-3 -bottom-1 left-0 text-primary/30"
                 viewBox="0 0 100 10"

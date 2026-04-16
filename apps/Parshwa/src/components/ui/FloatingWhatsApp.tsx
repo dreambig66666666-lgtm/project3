@@ -1,7 +1,7 @@
 import { SiWhatsapp } from "react-icons/si";
 
 export default function FloatingWhatsApp() {
-  const phoneNumber = "+9109820600844";
+  const phoneNumber = "+9108329064978";
   const message = "Hi, I want to book an appointment";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 

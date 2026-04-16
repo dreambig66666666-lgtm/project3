@@ -34,15 +34,19 @@ export default function Footer() {
           {/* Column 1: Brand */}
           <div className="lg:col-span-4 flex flex-col gap-6">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-primary-foreground font-display font-bold text-xl">
-                IC
-              </div>
+            <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center overflow-hidden">
+  <img 
+    src="/logo.png" 
+    alt="Logo" 
+    className="w-full h-full object-cover"
+  />
+</div>
               <div className="flex flex-col">
-                <span className="font-display font-bold text-xl leading-none text-white">IC Dental Clinic</span>
+                <span className="font-display font-bold text-xl leading-none text-white">Parshwa  Dental Clinic</span>
               </div>
             </div>
             <p className="text-background/70 text-sm leading-relaxed max-w-sm">
-              Providing modern, painless dental treatments using advanced technology and personalized care in Borivali West, Mumbai.
+              Providing modern, painless dental treatments using advanced technology and personalized care in Kandivali West, Mumbai.
             </p>
             <div className="flex items-center gap-4 mt-2">
               <a 
@@ -94,13 +98,13 @@ export default function Footer() {
               <li className="flex gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <span className="leading-relaxed">
-                  Raj Sebastian Kinny society, Shop11, IC Colony Cross Rd Number 4, next to Silvercoin restaurant, I C Colony, Borivali West, Mumbai, Maharashtra 400103
+                  Shop No 2, Shri yamuna chs, opp. Boraspada Road, Kandivali, Mahavir Nagar, Kandivali West, Mumbai, Maharashtra 400067
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
-                <a href="tel:+9109820600844" className="hover:text-primary transition-colors">
-                  +91 09820600844
+                <a href="tel:+9108329064978" className="hover:text-primary transition-colors">
+                  +91 08329064978
                 </a>
               </li>
               <li className="flex gap-3">
@@ -117,7 +121,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 pt-8 mt-4 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-background/50 text-sm text-center md:text-left">
-            © {new Date().getFullYear()} IC Dental Clinic. All rights reserved.
+            © {new Date().getFullYear()} Parshwa  Dental Clinic. All rights reserved.
           </p>
         </div>
       </div>

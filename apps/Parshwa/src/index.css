@@ -67,79 +67,72 @@
   --elevate-1: rgba(0,0,0, .03);
   --elevate-2: rgba(0,0,0, .08);
 
-  /* Modern Clinical Oasis Palette */
-  --background: 195 20% 99%; /* Very soft icy white */
-  --foreground: 215 25% 15%; /* Deep slate blue/gray */
+  /* ✅ CLEAN BLUE THEME (MATCHING LOGO) */
 
-  --border: 195 15% 90%;
-  --input: 195 15% 90%;
-  --ring: 190 60% 45%;
+  /* Background + Text */
+  --background: 0 0% 100%;             /* White */
+  --foreground: 220 10% 20%;           /* Dark gray */
 
+  --border: 220 10% 90%;
+  --input: 220 10% 90%;
+  --ring: 214 64% 33%;                 /* Blue */
+
+  /* Cards */
   --card: 0 0% 100%;
-  --card-foreground: 215 25% 15%;
-  --card-border: 195 15% 92%;
+  --card-foreground: 220 10% 20%;
+  --card-border: 220 10% 90%;
 
-  --sidebar: 195 20% 99%;
-  --sidebar-foreground: 215 25% 15%;
-  --sidebar-border: 195 15% 90%;
-  --sidebar-primary: 190 60% 45%;
+  /* Sidebar */
+  --sidebar: 0 0% 100%;
+  --sidebar-foreground: 220 10% 20%;
+  --sidebar-border: 220 10% 90%;
+  --sidebar-primary: 214 64% 33%;      /* Blue */
   --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 190 30% 94%;
-  --sidebar-accent-foreground: 215 25% 15%;
-  --sidebar-ring: 190 60% 45%;
+  --sidebar-accent: 210 20% 96%;
+  --sidebar-accent-foreground: 220 10% 20%;
+  --sidebar-ring: 214 64% 33%;
 
+  /* Popover */
   --popover: 0 0% 100%;
-  --popover-foreground: 215 25% 15%;
-  --popover-border: 195 15% 90%;
+  --popover-foreground: 220 10% 20%;
+  --popover-border: 220 10% 90%;
 
-  /* Primary: Calming Teal/Cyan */
-  --primary: 190 60% 45%;
+  /* 🔵 PRIMARY (MAIN BRAND COLOR) */
+  --primary: 214 64% 33%;              /* #1F4E8C */
   --primary-foreground: 0 0% 100%;
 
-  /* Secondary: Soft sky blue for sections */
-  --secondary: 195 35% 92%;
-  --secondary-foreground: 190 80% 25%;
+  /* Sections */
+  --secondary: 210 20% 96%;
+  --secondary-foreground: 220 10% 20%;
 
-  --muted: 195 15% 94%;
-  --muted-foreground: 215 15% 45%;
+  /* Text hierarchy */
+  --muted: 210 20% 96%;
+  --muted-foreground: 220 8% 55%;
 
-  --accent: 195 35% 92%;
-  --accent-foreground: 190 80% 25%;
+  /* Accent (same blue, no gold) */
+  --accent: 214 64% 33%;
+  --accent-foreground: 0 0% 100%;
 
+  /* System */
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
 
-  --chart-1: 190 60% 45%;
-  --chart-2: 175 40% 60%;
-  --chart-3: 210 50% 50%;
-  --chart-4: 150 40% 65%;
-  --chart-5: 230 40% 70%;
+  --chart-1: 214 64% 33%;
+  --chart-2: 214 50% 45%;
+  --chart-3: 214 40% 55%;
+  --chart-4: 214 30% 65%;
+  --chart-5: 214 20% 75%;
 
   --app-font-sans: 'Plus Jakarta Sans', sans-serif;
   --app-font-display: 'Outfit', sans-serif;
   --app-font-serif: Georgia, serif;
   --app-font-mono: Menlo, monospace;
-  
-  --radius: 0.75rem; /* Softer, friendlier corners */
-  
-  --shadow-2xs: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00);
-  --shadow-xs: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00);
-  --shadow-sm: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00), 0px 1px 2px -1px hsl(202.8169 89.1213% 53.1373% / 0.05);
-  --shadow: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00), 0px 1px 2px -1px hsl(202.8169 89.1213% 53.1373% / 0.05);
-  --shadow-md: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00), 0px 4px 8px -2px hsl(202.8169 89.1213% 53.1373% / 0.05);
-  --shadow-lg: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00), 0px 10px 15px -3px hsl(202.8169 89.1213% 53.1373% / 0.05);
-  --shadow-xl: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00), 0px 20px 25px -5px hsl(202.8169 89.1213% 53.1373% / 0.05);
-  --shadow-2xl: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00);
-  --tracking-normal: 0em;
-  --spacing: 0.25rem;
 
-  --sidebar-primary-border: hsl(from hsl(var(--sidebar-primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
-  --sidebar-accent-border: hsl(from hsl(var(--sidebar-accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
-  --primary-border: hsl(from hsl(var(--primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
-  --secondary-border: hsl(from hsl(var(--secondary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
-  --muted-border: hsl(from hsl(var(--muted)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
-  --accent-border: hsl(from hsl(var(--accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
-  --destructive-border: hsl(from hsl(var(--destructive)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --radius: 0.75rem;
+
+  --shadow-sm: 0px 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0px 4px 8px rgba(0,0,0,0.06);
+  --shadow-lg: 0px 10px 15px rgba(0,0,0,0.08);
 }
 
 .dark {
@@ -315,4 +308,13 @@
   .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
     inset: -1px;
   }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

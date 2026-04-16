@@ -60,7 +60,7 @@ export default function ContactSection() {
     );
   };
 
-  const whatsappUrl = `https://wa.me/+9109820600844?text=${encodeURIComponent("Hi, I want to book an appointment")}`;
+  const whatsappUrl = `https://wa.me/+9108329064978?text=${encodeURIComponent("Hi, I want to book an appointment")}`;
 
   return (
     <section id="contact" className="py-24 bg-secondary/30">
@@ -72,12 +72,14 @@ export default function ContactSection() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <span className="text-primary font-semibold text-sm tracking-wider uppercase">Get In Touch</span>
+  
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-3 mb-4">
             Book Your Appointment
           </h2>
           <p className="text-muted-foreground text-lg">
-            Reach out to us for any queries or to schedule your visit. We are here to help you achieve the smile you deserve.
+            Reach out to us for any queries or to schedule your visit.
+            <br />
+            We are here to help you achieve the smile you deserve.
           </p>
         </motion.div>
 
@@ -91,7 +93,7 @@ export default function ContactSection() {
           >
             <div className="flex flex-col gap-4">
               <a
-                href="tel:+9109820600844"
+                href="tel:+9108329064978"
                 className="flex items-center gap-4 p-5 rounded-2xl bg-background border border-border/50 hover:border-primary/30 hover:shadow-md transition-all group"
                 data-testid="link-call"
               >
@@ -100,7 +102,7 @@ export default function ContactSection() {
                 </div>
                 <div className="flex flex-col">
                   <span className="text-sm text-muted-foreground font-medium">Call Us Now</span>
-                  <span className="text-lg font-display font-bold text-foreground">+91 09820600844</span>
+                  <span className="text-lg font-display font-bold text-foreground">+91 08329064978</span>
                 </div>
               </a>
 
@@ -127,7 +129,7 @@ export default function ContactSection() {
                 <div className="flex flex-col">
                   <span className="text-sm text-muted-foreground font-medium">Visit Us</span>
                   <span className="text-sm font-medium text-foreground leading-relaxed">
-                    Raj Sebastian Kinny society, Shop11, IC Colony Cross Rd Number 4, next to Silvercoin restaurant, I C Colony, Borivali West, Mumbai, Maharashtra 400103
+                    Shop No 2, Shri yamuna chs, opp. Boraspada Road, Kandivali, Mahavir Nagar, Kandivali West, Mumbai, Maharashtra 400067
                   </span>
                 </div>
               </div>
@@ -135,15 +137,16 @@ export default function ContactSection() {
 
             <div className="rounded-2xl overflow-hidden h-[250px] bg-muted/30 border border-border/50">
               <iframe
-                src="https://maps.google.com/maps?q=IC+Dental+ic+colony+Borivali+Mumbai&ll=19.2455311,72.8483104&z=17&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3767.6176526873123!2d72.8444552!3d19.211895200000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b75728e33b75%3A0xd1fedbec93e15290!2sDR.%20Drishti&#39;s%20Parshwa%20Dental%20Clinic!5e0!3m2!1sen!2sin!4v1776323172718!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="IC Dental Clinic Location"
+                title="Parshwa  Dental Clinic Location"
               />
+              
             </div>
           </motion.div>
 

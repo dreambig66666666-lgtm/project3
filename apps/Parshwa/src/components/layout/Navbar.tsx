@@ -48,8 +48,8 @@ export default function Navbar() {
     { name: "Home", id: "home" },
     { name: "About Us", id: "about" },
     { name: "Our Services", id: "services" },
-    { name: "Gallery & Results", id: "gallery" },
-    { name: "Contact & Book", id: "contact" },
+    { name: "Gallery", id: "gallery" },
+    { name: "Contact", id: "contact" },
   ];
 
   return (
@@ -69,12 +69,12 @@ export default function Navbar() {
         >
           <img
             src="/logo.png"
-            alt="IC Dental logo"
+            alt="Parshwa  Dental logo"
             className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 object-contain shrink-0"
           />
           <div className="flex flex-col leading-none whitespace-nowrap min-w-0">
             <span className="text-lg sm:text-xl md:text-2xl font-bold text-foreground">
-              IC Dental
+              Parshwa  Dental
             </span>
             <span className="text-left text-xs sm:text-sm font-medium text-primary tracking-wider uppercase text-foreground">
               Clinic
